@@ -21,16 +21,16 @@ OnlyLetterSpace | `"second example"` | TwoWay
 OnlyLetterCapitalizer | `"secondExample"` | TwoWay
 OnlyLetterCapitalizerFirst | `"secondExample"` | TwoWay
 OnlyLetterCapitalizerSpace | `"Second Example"` | TwoWay
-OnlyLetterCapitalizerFirstSpace | `"second Example"`| TwoWay
+OnlyLetterCapitalizerFirstSpace | `"Second example"`| TwoWay
 OnlyLetterUpper | `"SECONDEXAMPLE"` | TwoWay
 OnlyLetterLower | `"secondexample"` | TwoWay
 OnlyLetterUpperSpace | `"SECOND EXAMPLE"` | TwoWay
 OnlyLetterLowerSpace | `"second example"` | TwoWay
 LetterNumberSpaces | `"Second Example 2"` | TwoWay
 TextWithoutSpace | `"Second third Example"` | TwoWay
-LetterNumber | `"Example Second"` | TwoWay
-Lower | `"Example Second"` | TwoWay
-Upper | `"Example Second"` | TwoWay
+LetterNumber | `"Example2Second"` | TwoWay
+Lower | `"example second"` | TwoWay
+Upper | `"EXAMPLE SECOND"` | TwoWay
 Digits | `"123" or "-123"` | TwoWay
 DigitsPositive | `"123"` | TwoWay
 DigitsNegative | `"-123"` | TwoWay
@@ -50,6 +50,9 @@ PercentDecimal | `"12.34%" or "-12.34%"` | OneWay and OriginalValue TwoWay
 PercentDecimalNegative | `"-12.34%"` | OneWay and OriginalValue TwoWay
 PercentDecimalPositive | `"12.34%"` | OneWay and OriginalValue TwoWay
 
+##### example <br>
+`<TextBox  Text="{Binding example, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+           exOM:TextBoxFieldAssistOM.TypeTextBox="Money"/>`
 
 ## Special properties
 Properties | Default | Description
@@ -107,7 +110,7 @@ The format is key and value
 example
 
 `<TextBox
-Text="{Binding example, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource cMoneyToDecimal}, ConverterParameter='Decimals:3, Symbol:%'}"/>`
+Text="{Binding example, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource MoneyDecimalExOM}, ConverterParameter='Decimals:3, Symbol:%'}"/>`
 <br>
 
 
