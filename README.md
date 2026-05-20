@@ -121,3 +121,20 @@ Text="{Binding example, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Conver
 
 When you use conversions, you don't need dependency properties
 
+
+## Special properties
+Properties | Default | Description
+---------- | ------- | -----------
+CurrencySymbol | `$` or `%` | symbol that represents the currency or percentage
+DecimalSeparator | `.` | decimal separator
+NumberDecimals | `2` | number decimals
+NumberIntegers | `0` | represents whole numbers in a decimal expression, 0 indicates infinity
+OriginalValue | `null` | extract original value of text property: example. coin $2,020.12 is equal to 2020.12 in original value
+PositionSymbol | `BeforeSymbol` or `AfterSymbol`| enumeration that provides the location of the symbol
+RemoveLeadingZeros | `false` | remove leading zeros
+SelectAllInFocus | `false` | selects all text value, when it gets focus
+ShowCurrencySymbol | `true` | displays the currency or percent symbol
+ThousandthSeparator | `,` | thousandth separator
+TypeTextBox | `Text` | type of textbox
+Mask | `null` | mask
+UnMask | `null` | unmask
