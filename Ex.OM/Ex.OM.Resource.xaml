@@ -1,0 +1,33 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Ex.OM.Extentions.Converts">
+    
+    <local:ConvertCapitalizer x:Key="CapitalizerExOM" />
+    <local:ConvertCapitalizerFirst x:Key="CapitalizerFirstExOM" />
+    
+    <local:ConvertMoneyNegativeOM x:Key="MoneyNegativeExOM"/>
+    <local:ConvertMoneyPositiveOM x:Key="MoneyPositiveExOM"/>
+    <local:ConvertMoneyOM x:Key="MoneyExOM"/>
+    
+    <local:ConvertMoneyDecimalOM x:Key="MoneyDecimalExOM"/>
+    <local:ConvertMoneyDecimalPositiveOM x:Key="MoneyDecimalPositiveExOM"/>
+    <local:ConvertMoneyDecimalNegativeOM x:Key="MoneyDecimalNegativeExOM"/>
+
+    <local:ConvertPercentOM x:Key="PercentExOM"/>
+    <local:ConvertPercentPositiveOM x:Key="PercentPositiveExOM"/>
+    <local:ConvertPercentNegativeOM x:Key="PercentNegativeExOM"/>
+
+
+    <local:ConvertPercentDecimalOM x:Key="PercentDecimalExOM"/>
+    <local:ConvertPercentDecimalPositiveOM x:Key="PercentDecimalPositiveExOM"/>
+    <local:ConvertPercentDecimalNegativeOM x:Key="PercentDecimalNegativeExOM"/>
+
+    <local:ConvertDecimalOM x:Key="DecimalExOM"/>
+    <local:ConvertDecimalPositiveOM x:Key="DecimalPositiveExOM"/>
+    <local:ConvertDecimalNegativeOM x:Key="DecimalNegativeExOM"/>
+
+    <local:ConvertDigitOM x:Key="DigitExOM"/>
+    <local:ConvertDigitPositiveOM x:Key="DigitPositiveExOM"/>
+    <local:ConvertDigitNegativeOM x:Key="DigitNegativeExOM"/>
+
+</ResourceDictionary>

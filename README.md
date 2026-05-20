@@ -1,34 +1,37 @@
-![OM](https://raw.githubusercontent.com/EliezerVM/Ex.OM/master/OM.png)
+![OM](https://gitlab.com/ElierVM/Ex.OM/-/blob/master/OM.png)
 # Ex.OM
 Extensions and tools for wpf controls
 
 ### Installation
-![Instalacion](https://raw.githubusercontent.com/EliezerVM/Ex.OM/master/Intalacion.PNG)
+![Instalacion](https://gitlab.com/ElierVM/Ex.OM/-/blob/master/Intalacion.PNG)
 
 ### namespace
-> `xmlns:exOM="clr-namespace:Ex.OM.Extentions;assembly=Ex.OM"`
+``` xaml
+xmlns:exOM="clr-namespace:Ex.OM.Extentions;assembly=Ex.OM"
+```
+
 
 
 ### TextBox Formats
 
-TextBoxtType | Formats       | Binding Mode
------------- | ------------- | ------------
-String | `"example"`| TwoWay
+TextBoxType |  Formats       | Binding Mode
+------------ | ------------- | -------------
+String | `"First example"` | TwoWay
 Capitalizer | `"Second Example"`| TwoWay
-CapitalizerFirst | `"second Example"` | TwoWay
+CapitalizerFirst | `"Second Example"` | TwoWay
 OnlyLetter | `"SecondExample"` | TwoWay
 OnlyLetterSpace | `"second example"` | TwoWay
-OnlyLetterCapitalizer | `"secondExample"` | TwoWay
-OnlyLetterCapitalizerFirst | `"secondExample"` | TwoWay
-OnlyLetterCapitalizerSpace | `"Second Example"` | TwoWay
-OnlyLetterCapitalizerFirstSpace | `"Second example"`| TwoWay
+OnlyLetterCapitalizer | `"SecondExample"` | TwoWay
+OnlyLetterCapitalizerFirst | `"Secondexample"` | TwoWay
+OnlyLetterCapitalizerSpace | `"Secondexample"` | TwoWay
+OnlyLetterCapitalizerFirstSpace | `"Second example"` | TwoWay
 OnlyLetterUpper | `"SECONDEXAMPLE"` | TwoWay
 OnlyLetterLower | `"secondexample"` | TwoWay
 OnlyLetterUpperSpace | `"SECOND EXAMPLE"` | TwoWay
 OnlyLetterLowerSpace | `"second example"` | TwoWay
 LetterNumberSpaces | `"Second Example 2"` | TwoWay
 TextWithoutSpace | `"Second third Example"` | TwoWay
-LetterNumber | `"Example2Second"` | TwoWay
+LetterNumber | `"Example2"` | TwoWay
 Lower | `"example second"` | TwoWay
 Upper | `"EXAMPLE SECOND"` | TwoWay
 Digits | `"123" or "-123"` | TwoWay
@@ -37,87 +40,84 @@ DigitsNegative | `"-123"` | TwoWay
 Decimals | `"123.45" or "-123.45"` | TwoWay
 DecimalsNegative | `"-123.45"` | TwoWay
 DecimalsPositive | `"123.45"` | TwoWay
-Money | `"$ 123" or "-$ 123"` | OneWay and OriginalValue TwoWay
-MoneyNegative | `"-$ 123"` | OneWay and OriginalValue TwoWay
-MoneyPositive | `"$ 123"` | OneWay and OriginalValue TwoWay
-MoneyDecimal | `"$ 123.45" or "-$ 123.45"` | OneWay and OriginalValue TwoWay
-MoneyDecimalNegative | `"-$ 123.45"` | OneWay and OriginalValue TwoWay
-MoneyDecimalPositive | `"$ 123.45"` | OneWay and OriginalValue TwoWay
-Percent | `"12%"` | OneWay and OriginalValue TwoWay
-PercentNegative | `"-12%"` | OneWay and OriginalValue TwoWay
-PercentPositive | `"12%"` | OneWay and OriginalValue TwoWay
-PercentDecimal | `"12.34%" or "-12.34%"` | OneWay and OriginalValue TwoWay
-PercentDecimalNegative | `"-12.34%"` | OneWay and OriginalValue TwoWay
-PercentDecimalPositive | `"12.34%"` | OneWay and OriginalValue TwoWay
+Money | `"$123" or "-$123"` | TwoWay 
+MoneyNegative | `"-$123"` | TwoWay 
+MoneyPositive | `"$123"` | TwoWay 
+MoneyDecimal | `"$123.45" or "-$123.45"` | TwoWay 
+MoneyDecimalNegative | `"-$123.45"`                         | TwoWay       
+MoneyDecimalPositive | `"$123.45"`                          | TwoWay       
+Percent | `"12%"` | TwoWay 
+PercentNegative | `"-12%"` | TwoWay 
+PercentPositive | `"12%"` | TwoWay 
+PercentDecimal | `"12.34%" or "-12.34%"` | TwoWay 
+PercentDecimalNegative | `"-12.34%"` | TwoWay 
+PercentDecimalPositive | `"12.34%"` | TwoWay 
+Mask | `"(000) 000-0000" ` ~ (790) 555-5555 | TwoWay 
 
-##### example <br>
-`<TextBox  Text="{Binding example, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-           exOM:TextBoxFieldAssistOM.TypeTextBox="Money"/>`
 
 ## Special properties
 Properties | Default | Description
----------- | ------- | -----------
+---------- | :-----: | :----------
 CurrencySymbol | `$` or `%` | symbol that represents the currency or percentage
-DecimalSeparator | `.` | decimal separator
-NumberDecimals | `2` | number decimals
-NumberIntegers | `0` | represents whole numbers in a decimal expression, 0 indicates infinity
-OriginalValue | `null` | extract original value of text property: example. coin $2,020.12 is equal to 2020.12 in original value
-PositionSymbol | `BeforeSymbol` or `AfterSymbol`| enumeration that provides the location of the symbol
+Caret | 0 | Index in which the caret is located 
+Mask | `string.Empty` | Mask 
+DecimalNumber | `2` | Number decimals 
+NumberIntegers | `0` | Represents whole numbers in a decimal expression, 0 indicates infinity 
+OriginalValue | `string.Empty` | Extract original value of text property: example. coin $2,020.12 is equal to 2020.12 in original value 
+PositionSymbol | `BeforeSymbol` or `AfterSymbol`| Enumeration that provides the location of the symbol 
+PromptCharMask | `'_'` | PromptCharMask of the mask 
 RemoveLeadingZeros | `false` | remove leading zeros
 SelectAllInFocus | `false` | selects all text value, when it gets focus
-ShowCurrencySymbol | `true` | displays the currency or percent symbol
-ThousandthSeparator | `,` | thousandth separator
-TypeTextBox | `Text` | type of textbox
-Mask | `null` | mask
-UnMask | `null` | unmask
+ShowSymbol | `true` | Displays the currency 
+TypeTextBox | `FormatTextBox` | Format type 
+UnMask | `string.Empty` | Unmask 
+UnMaskValue | `string.Empty` | Value outside the mask 
 
 ## Convert
 
-### Resource.
-add resource in app.xaml `<ResourceDictionary Source="pack://application:,,,/Ex.OM;component/Ex.OM.Resource.xaml" />`
+- `MoneyExOM`
+- `MoneyDecimalExOM`
+- `MoneyDecimalNegativeExOM`
+- `MoneyDecimalPositiveExOM`
+- `MoneyPositiveExOM`
+- `MoneyNegativeExOM`
+- `PercentExOM`
+- `PercentPositiveExOM`
+- `PercentNegativeExOM`
+- `PercentDecimalExOM`
+- `PercentDecimalPositiveExOM`
+- `PercentDecimalNegativeExOM`
+- `DecimalExOM`
+- `DecimalPositiveExOM`
+- `DecimalNegativeExOM`
+- `DigitExOM`
+- `DigitPositiveExOM`
+
+- `DigitNegativeExOM`
 
 
-Convert <br>
-`MoneyExOM` <br>
-`MoneyDecimalExOM`<br>
-`MoneyDecimalNegativeExOM` <br>
-`MoneyDecimalPositiveExOM` <br>
-`MoneyPositiveExOM` <br>
-`MoneyNegativeExOM` <br>
-`PercentExOM` <br>
-`PercentPositiveExOM` <br>
-`PercentNegativeExOM` <br>
-`PercentDecimalExOM` <br>
-`PercentDecimalPositiveExOM` <br>
-`PercentDecimalNegativeExOM` <br>
-`DecimalExOM` <br>
-`DecimalPositiveExOM`<br>
-`DecimalNegativeExOM`<br>
-`DigitExOM`<br>
-`DigitPositiveExOM`<br>
-`DigitNegativeExOM`<br>
 
 ## ConverterParameter
+
 The format is key and value
 
-`Decimals`
-`Symbol`
-`LimitIntegers`
-`PositionSymbol`
-`ShowSymbol`
-`SeparatorDecimal`
+- `Decimals` 
+- `Symbol` 
+- `LimitIntegers` 
+- `PositionSymbol` 
+- `ShowSymbol` 
+- `SeparatorDecimal`
 
-example
+##### Example
 
-`<TextBox
-Text="{Binding example, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource MoneyDecimalExOM}, ConverterParameter='Decimals:3, Symbol:%'}"/>`
-<br>
+```xaml
+<TextBox Text="{Binding example, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource MoneyDecimalExOM}, ConverterParameter='Decimals:3, Symbol:%'}"/>
+```
 
-
-![Result](https://raw.githubusercontent.com/EliezerVM/Ex.OM/master/SubTotal.png)
-
-<br>
+![Result](https://gitlab.com/ElierVM/Ex.OM/-/blob/master/SubTotal.png)
 
 
-When you use conversions, you don't need dependency properties
 
+## Known Limitations
+
+**TextBox**: You cannot assign convert to the text property as this is used for the plugin to work properly.

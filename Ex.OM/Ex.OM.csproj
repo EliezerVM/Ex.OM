@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFrameworks>net48;netcoreapp3.1</TargetFrameworks>
+    <UseWPF>true</UseWPF>
+    <AssemblyVersion>1.0.0.3</AssemblyVersion>
+    <Authors>Eliezer Oliva</Authors>
+    <Company>OM/Eliezer Oliva</Company>
+    <Copyright>Copyright © 2020</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>OM.png</PackageIcon>
+    <RepositoryType>public</RepositoryType>
+    <RepositoryUrl>https://github.com/EliezerVM/Ex.OM</RepositoryUrl>
+    <PackageTags>TextBox,TextBoxField,Controls,Toolkit,Reactive,WPF,Extensions,DependencyProperties,Windows,PropertiesChange</PackageTags>
+    <Description>Extensions for agile programming in wpf controls. Currently textbox field</Description>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Version>1.0.25</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Configurations\LetterNumberSpacesConfiguration.cs" />
+    <Compile Remove="Configurations\MoneyNegativeDecimalConfiguration.cs" />
+    <Compile Remove="Configurations\MoneyPositiveDecimalConfiguration.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\eliev\Documents\Proyectos C#\Ex.OM\Ex.OM\OM.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+</Project>
